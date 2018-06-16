@@ -1,0 +1,188 @@
+{% extends 'index.twig' %}
+{% block body %}
+    <div id="content">
+        <section id="kalkulator-sekcja" class="boxed light-grey wow fadeIn" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeIn;">
+            <form id="oblicz_cene" action="" method="post">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Oblicz cenę nadruku</h3>
+                        </div>
+                        <div class="col-md-12 calc-row">
+                            <div class="inside-row">
+                                <div class="col-md-4 col-xs-12">
+                                    <span class="number">1</span>
+                                    <p class="h">Rodzaj odzieży?</p>
+                                </div>
+                                <div class="col-md-8 col-xs-12 forms">
+                                    <input class="run" type="radio" id="tshirt" name="rodzaj" value="tshirt" checked>
+                                    <label for="tshirt">
+                                        <span>t-shirt/longsleeve</span>
+                                    </label>
+                                    <input class="run" type="radio" id="polo" name="rodzaj" value="polo">
+                                    <label for="polo">
+                                        <span>koszulka polo</span>
+                                    </label>
+                                    <input class="run" type="radio" id="bluza" name="rodzaj" value="bluza">
+                                    <label for="bluza">
+                                        <span>bluza</span>
+                                    </label>
+                                    <input class="run" type="radio" id="torba" name="rodzaj" value="torba">
+                                    <label for="torba">
+                                        <span>torba bawełniana</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 calc-row">
+                            <div class="inside-row">
+                                <div class="col-md-4 col-xs-12">
+                                    <span class="number">2</span>
+                                    <p class="h">Kolor odzieży?</p>
+                                </div>
+                                <div class="col-md-8 col-xs-12 forms">
+                                    <input class="run" type="radio" id="jasny" name="kolor" value="jasny" checked>
+                                    <label for="jasny">
+                                        <span>Biały</span>
+                                    </label>
+                                    <input class="run" type="radio" id="ciemny" name="kolor" value="ciemny">
+                                    <label for="ciemny">
+                                        <span>Kolorowy</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 calc-row">
+                            <div class="inside-row">
+                                <div class="col-md-4 col-xs-12">
+                                    <span class="number">3</span>
+                                    <p class="h">Nakład?</p>
+                                </div>
+                                <div class="col-md-8 col-xs-12 forms">
+                                    <input class="run_number" type="number" name="naklad" placeholder="Wpisz ilość" value="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 calc-row">
+                            <div class="inside-row">
+                                <div class="col-md-4 col-xs-12">
+                                    <span class="number">4</span>
+                                    <p class="h">Liczba miejsc nadruku?</p>
+                                </div>
+                                <div class="col-md-8 col-xs-12 forms">
+                                    <input class="run_liczba" type="radio" id="liczba_miejsc_1" name="liczba_miejsc" value="1" checked>
+                                    <label for="liczba_miejsc_1">
+                                        <span>1</span>
+                                    </label>
+                                    <input class="run_liczba" type="radio" id="liczba_miejsc_2" name="liczba_miejsc" value="2">
+                                    <label for="liczba_miejsc_2">
+                                        <span>2</span>
+                                    </label>
+                                    <input class="run_liczba" type="radio" id="liczba_miejsc_3" name="liczba_miejsc" value="3">
+                                    <label for="liczba_miejsc_3">
+                                        <span>3</span>
+                                    </label>
+                                    <input class="run_liczba" type="radio" id="liczba_miejsc_4" name="liczba_miejsc" value="4">
+                                    <label for="liczba_miejsc_4">
+                                        <span>4</span>
+                                    </label>
+                                    <input class="run_liczba" type="radio" id="liczba_miejsc_5" name="liczba_miejsc" value="5">
+                                    <label for="liczba_miejsc_5">
+                                        <span>5</span>
+                                    </label>
+                                    <input class="run_liczba" type="radio" id="liczba_miejsc_6" name="liczba_miejsc" value="6">
+                                    <label for="liczba_miejsc_6">
+                                        <span>6</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="nadruki_here">
+                            <div id="nadruki">
+                                <div class="col-md-12 calc-row">
+                                    <div class="inside-row">
+                                        <div class="col-md-4 col-xs-12">
+                                            <span class="number">5</span>
+                                            <p class="h" id="title_5">Wielkość pierwszego nadruku?</p>
+                                        </div>
+                                        <div class="col-md-8 col-xs-12 forms">
+                                            <input class="run" type="radio" id="wielkosc_1" name="wielkosc" value="a7" checked>
+                                            <label for="wielkosc_1" class="wielkosc">
+                                                <span>Do 7x11mm</span>
+                                            </label>
+                                            <input class="run" type="radio" id="wielkosc_2" name="wielkosc" value="a6" checked>
+                                            <label for="wielkosc_2" class="wielkosc">
+                                                <span>Do 10x15mm</span>
+                                            </label>
+                                            <input class="run" type="radio" id="wielkosc_3" name="wielkosc" value="a4" checked>
+                                            <label for="wielkosc_3" class="wielkosc">
+                                                <span>Do 21x30mm</span>
+                                            </label>
+                                            <input class="run" type="radio" id="wielkosc_4" name="wielkosc" value="a3" checked>
+                                            <label for="wielkosc_4" class="wielkosc">
+                                                <span>Do 30x42mm</span>
+                                            </label>
+                                            <input class="run" type="radio" id="wielkosc_5" name="wielkosc" value="32x50" checked>
+                                            <label for="wielkosc_5" class="wielkosc">
+                                                <span>Do 40x50mm</span>
+                                            </label>
+                                            <input class="run" type="radio" id="wielkosc_6" name="wielkosc" value="40x60" checked>
+                                            <label for="wielkosc_6" class="wielkosc">
+                                                <span>Do 50x70mm</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 calc-row">
+                            <div class="inside-row">
+                                <div class="col-md-4 col-xs-12">
+                                    <span class="number">6</span>
+                                    <p class="h" >Składanie jednostkowe i pakowanie w woreczki?</p>
+                                </div>
+                                <div class="col-md-8 col-xs-12 forms">
+                                    <input class="run" type="radio" id="skladanie_1" name="skladanie" value="koszt_">
+                                    <label for="skladanie_1">
+                                        <span>Tak</span>
+                                    </label>
+                                    <input class="run" type="radio" id="skladanie_2" name="skladanie" value="wsp_0" checked>
+                                    <label for="skladanie_2">
+                                        <span>Nie</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 calc-row">
+                            <div class="inside-row">
+                                <div class="col-md-4 col-xs-12">
+                                    <span class="number">7</span>
+                                    <p class="h" >Sposób dostarczenia?</p>
+                                </div>
+                                <div class="col-md-8 col-xs-12 forms">
+                                    <input class="run" type="radio" id="przesylka_1" name="przesylka" value="koszt_przesylki" checked>
+                                    <label for="przesylka_1">
+                                        <span>Kurier</span>
+                                    </label>
+                                    <input class="run" type="radio" id="przesylka_2" name="przesylka" value="wsp_0">
+                                    <label for="przesylka_2">
+                                        <span>Odbiór osobisty</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 podsumowanie">
+                            <div class="h1fake">
+                                <strong>Cena za sztukę</strong> (netto)<strong>:</strong>
+                                <span id="price">4.55 zł</span>
+                            </div>
+                            <h2>Wartość całego zamówienia (dla <strong id="price_naklad">100</strong> szt): <strong id="price_all">455.00 zł</strong> netto</h2>
+                            <h2>Koszt transportu (1 karton):<strong id="transport">12.00 zł</strong> netto</h2> <br>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src={{ asset ('js/calc.js', 'theme') }}></script>
+{% endblock %}

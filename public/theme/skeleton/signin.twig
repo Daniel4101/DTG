@@ -1,0 +1,60 @@
+{% extends 'index.twig' %}
+
+
+{% block body %}
+<h1 class="disclaimer"> DTG CENTER</h1>
+<p> Witaj, proszę zaloguj sie jeśli nie masz konta możesz je łatwo utworzych klikając w przycisk zarejestruj!</p>
+
+
+    <div class="centred disclaimer">
+        <h4>Login</h4>
+    </div>
+    <div class="centred">
+        <form class="form-group" action="login.php" method="post">
+            <div class="form-group">
+                <label class="sr-only" for="username">Login</label><input type="text" class="form-control input-sm" placeholder="Nazwa użytkownika" id="username" name="username">
+            </div>
+            <div class="form-group">
+
+                <label class="sr-only" for="password">Hasło</label>
+                <input type="password" class="form-control input-sm" placeholder="Hasło" id="password" name="password"></div>
+
+        </form>
+
+    </div>
+    <div class="d-md-flex justify-content-center flex-row align-items-baseline">
+        <button type="submit" class="btn btn-info btn-xs">Zaloguj się</button>
+        <p class="sign">Lub</p>
+        <button  class="btn btn-info btn-xs" id="reg" data-toggle="modal" data-target="#registerModal" data-dismiss="modal">Załóż konto</button>
+    </div>
+
+
+
+
+    <div id="registerModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header centred">
+                    <h4>Załóż konto</h4>
+                </div>
+                <div class="modal-body centred">
+                    <form class="form-group" id="regform"  method="post">
+                            <label class="sr-only" for="username">Nazwa użytkownika</label><input type="text" class="form-control input-sm" placeholder="nazwa urzytkownika" id="username" name="username" value="" required/>
+                            <label class="sr-only" for="password">Hasło</label>
+                            <input type="password" class="form-control input-sm" placeholder="Hasło" id="password" name="password" value="" required/>
+                            <label class="sr-only" for="email">Email</label><input type="text" class="form-control input-sm" placeholder="E-mail" id="email" name="email" value="" required>
+                            <label class="sr-only" for="name">Imię</label>
+                            <input type="text" class="form-control input-sm" placeholder="Imię" id="name" name="name" value="" required/>
+                            <label class="sr-only" for="surname">Nazwisko</label>
+                            <input type="text" class="form-control input-sm" placeholder="Nazwisko" id="surname" name="surname" value="" required/>
+                        <div class="d-flex align-items-baseline justify-content-between margin-reg ">
+                            <input type="submit" class="btn btn-info btn-xs" value="Załóż konto"/>
+                            <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Anuluj</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dis"></div>
+{% endblock %}

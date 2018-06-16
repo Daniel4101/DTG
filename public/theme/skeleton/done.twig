@@ -1,0 +1,19 @@
+{% extends 'index.twig' %}
+    {% block body %}
+        <div id="content">
+            <div data-aos="fade-up">
+                <h1  class="disclaimer" id="realizacje">Realizacje </h1>
+            </div>
+            <div class="container" data-aos="fade-up">
+                <div class="row flex-box flex-wrap-wrap">
+                    <div class="col-sm-4 flex-box flex-justify-center flex-align-center"><a data-fancybox="images"   href={{ asset ('img/tesla.jpeg', 'theme') }}  ><img class="img-fluid" src={{ asset ('img/tesla.jpeg', 'theme') }}></a></div>
+                    <div class="col-sm-4 flex-box flex-justify-center flex-align-center"><a data-fancybox="images" class="fancybox" href={{ asset ('img/85.jpg', 'theme') }}  ><img class="img-fluid" src={{ asset ('img/85.jpg', 'theme') }}></a></div>
+                    <div class="col-sm-4 flex-box flex-justify-center flex-align-center"><a data-fancybox="images" class="fancybox"  href={{ asset ('img/narod.jpg', 'theme') }}  ><img class="img-fluid" src={{ asset ('img/narod.jpg', 'theme') }}></a></div>
+                    <div class="col-sm-4 flex-box flex-justify-center flex-align-center"><a data-fancybox="images" class="fancybox" href={{ asset ('img/skane.jpg', 'theme') }}  ><img class="img-fluid" src={{ asset ('img/skane.jpg', 'theme') }}></a></div>
+                    <div class="col-sm-4 flex-box flex-justify-center flex-align-center"><a data-fancybox="images" class="fancybox" href={{ asset ('img/maly.jpg', 'theme') }}  ><img class="img-fluid" src={{ asset ('img/maly.jpg', 'theme') }}></a></div>
+                    <div class="col-sm-4 flex-box flex-justify-center flex-align-center"><a data-fancybox="images" class="fancybox" href={{ asset ('img/N06.jpg', 'theme') }}  ><img class="img-fluid" src={{ asset ('img/N06.jpg', 'theme') }}></a></div>
+
+                </div>
+            </div>
+        </div>
+    {% endblock %}

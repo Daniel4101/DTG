@@ -1,0 +1,62 @@
+
+<footer data-aos="fade-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 footer-navigation">
+                <h3><a href="#">DTGCenter </a></h3>
+                <p class="links"><a href="index.html">Strona domowa</a><strong> · </strong><a href="oferta.html">Oferta </a><strong> · </strong><a href="realizacje.html">Realizacje </a><strong> · </strong><a href="ofirmie.html">O Firmie</a><strong> · </strong><a href="porady.html">Porady </a><strong> · </strong><a href="regulamin.html">Regulamin </a>
+
+                </p>
+                <p class="company-name">DTGCenter © 2018 </p>
+            </div>
+            <div class="col-md-4 col-sm-6 footer-contacts">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span">ul. Miejscowa 11</span> 12-345 Gdzieś</p>
+                </div>
+                <div><i class="fa fa-phone footer-contacts-icon"></i>
+                    <p class="footer-center-info email text-left"> +48 555 123 456</p>
+                </div>
+                <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                    <p> <a href="#" target="_blank">bok@DTGCenter.com.pl</a></p>
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-4 footer-about">
+                <h4>O nas</h4>
+                <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                </p>
+                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-youtube"></i></a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+{#<footer>#}
+    {#<hr>#}
+
+    {#<h4>{{ __('Menu') }}</h4>#}
+    {#{{ menu(template = 'partials/_sub_menu.twig') }}#}
+
+    {#<hr>#}
+
+    {#<h4>{{ __('Search') }}</h4>#}
+
+    {#<form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">#}
+        {#<input type="search" value="{{ search|default() }}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search" >#}
+        {#<button type="submit">{{ __('general.phrase.search') }}</button>#}
+    {#</form>#}
+
+    {#<hr>#}
+
+    {#<p>#}
+        {#{{ __("This website is <a href='%url%' target='_blank' title='Sophisticated, lightweight & simple CMS'>Built with Bolt</a>.",{'%url%':'http://bolt.cm'}) }}#}
+    {#</p>#}
+
+    {#{{ widgets('footer') }}#}
+
+{#</footer>#}

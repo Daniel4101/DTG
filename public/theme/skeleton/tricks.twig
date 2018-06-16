@@ -1,0 +1,23 @@
+{% extends 'index.twig' %}
+
+{% block body %}
+    <div class="container naszafirma col-lg-12" data-aos="fade-up">
+        <h1 style="margin-bottom:0;padding-bottom:0px;">Porady </h1>
+        <h3>Wszystko co powinieneś wiedzieć o druku</h3>
+    </div>
+    <div class="d-md-flex justify-content-around align-items-md-baseline">
+
+        {% setcontent tricks = 'tricks' limit 2 allowpaging %}
+        {% for trick in tricks %}
+        <div class="col-lg-4 col-sm-12">
+            <div class="flex-sm-wrap"><a href="{{ trick.link }}"><img class="img-fluid " src=" /files/{{ trick.image}}" ></a>
+                <h3 class="name">{{ trick.title }}</h3>
+                <p class="description">{{ trick.teaser }}</p><a href="{{ trick.link }}" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+            </div>
+
+        {% endfor %}
+    </div>
+    <div class="pager">
+    {{ pager('', 3, 'partials/_sub_mypager.twig', 'theme') }}
+    </div>
+{% endblock %}
