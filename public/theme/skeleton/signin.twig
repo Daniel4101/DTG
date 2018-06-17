@@ -2,23 +2,22 @@
 
 
 {% block body %}
-<h1 class="disclaimer"> DTG CENTER</h1>
-<p> Witaj, proszę zaloguj sie jeśli nie masz konta możesz je łatwo utworzych klikając w przycisk zarejestruj!</p>
+<div data-aos="fade-up">
+    <h1 class="disclaimer"> DTG CENTER</h1>
+    <p> Witaj, proszę zaloguj sie jeśli nie masz konta możesz je łatwo utworzych klikając w przycisk zarejestruj!</p>
 
 
-    <div class="centred disclaimer">
+    <div class="centred disclaimer" >
         <h4>Login</h4>
     </div>
-    <div class="centred">
-        <form class="form-group" action="login.php" method="post">
+    <div class="centred" data-aos="fade-up">
+        <form class="form-group"  method="post">
             <div class="form-group">
                 <label class="sr-only" for="username">Login</label><input type="text" class="form-control input-sm" placeholder="Nazwa użytkownika" id="username" name="username">
             </div>
             <div class="form-group">
-
                 <label class="sr-only" for="password">Hasło</label>
                 <input type="password" class="form-control input-sm" placeholder="Hasło" id="password" name="password"></div>
-
         </form>
 
     </div>
@@ -27,11 +26,11 @@
         <p class="sign">Lub</p>
         <button  class="btn btn-info btn-xs" id="reg" data-toggle="modal" data-target="#registerModal" data-dismiss="modal">Załóż konto</button>
     </div>
+</div>
 
 
 
-
-    <div id="registerModal" class="modal fade" role="dialog">
+    <div id="registerModal" class="modal fade" role="dialog" data-aos="fade-up">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header centred">

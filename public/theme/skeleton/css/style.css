@@ -121,6 +121,9 @@ form input{
 .dis{
     margin-top: 13vh;
 }
+.bottom-margin{
+    margin-bottom: 3%;
+}
 @media only  screen and ( min-width: 320px) and (max-width: 640px)
 {
    iframe{
@@ -148,4 +151,11 @@ body, wrapper {
 
 .flex-fill {
     flex:1 1 auto;
+}
+.ops{
+    opacity: 0;
+}
+.modal-backdrop{
+    background-color: transparent;
+    display: none;
 }
